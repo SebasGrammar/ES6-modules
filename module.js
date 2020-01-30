@@ -19,3 +19,7 @@ export function more() {
 export function myNameMustMatch() {
     console.log("Names matched.")
 }
+
+export function doesNotMatter() {
+
+} as itMatters

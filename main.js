@@ -1,3 +1,6 @@
+// https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+
 import iCanHaveAnyName from './module.js'; // As opposed to named imports, default imports can have any name you want.
 // Another key difference between these two is that named imports have to be enclosed in brackets.
 import {myNameCanChange as myNameChanged} from './module.js'
