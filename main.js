@@ -8,8 +8,14 @@ import {myNameMustMatch} from './module.js' // named imports have to actually ma
 // import myNameMustMatch from "./module.js" X won't work.
 import * as everySingleExport from "./module.js" // This is an object containing every single export from the specified module.
 
-myNameMustMatch(myNameMustMatch)
+import {logOne, logTwo, addOne} from "./module.js" // It is possible to import multiple exports by separating
+// them with commas.
+import {one, two} from "./module.js"
 
+console.log(everySingleExport.three) // These values are read only. They can't be modified from outside
+console.log(nice) // Didn't even have to import this one because it's global.
+
+myNameMustMatch(myNameMustMatch)
 
 console.log(iCanHaveAnyName)
 
@@ -22,3 +28,12 @@ myNameChanged()
 console.log("Wihout brackets")
 
 everySingleExport.more()
+
+
+logOne()
+addOne()
+logOne()
+console.log(one)
+addOne()
+// one += 5 won't work!
+console.log(one)

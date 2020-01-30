@@ -1,5 +1,10 @@
 let name = "Sebastian"
 
+window.nice = "nice" // if, for some reason, you need to declare a global variable, you can use
+// the window object.
+
+export let one = 1, two = 2, three = 3;
+
 export default function logName() {
     console.log(name)
 }
@@ -20,6 +25,17 @@ export function myNameMustMatch() {
     console.log("Names matched.")
 }
 
-export function doesNotMatter() {
+function logOne() {
+    console.log(one)
+}
 
-} as itMatters
+function logTwo() {
+    console.log(two)
+}
+
+function addOne() {
+    one ++
+}
+
+export {logOne, logTwo, addOne} // It is also possible to export multiple exports by separating them
+// with commas (after you have defined them)
