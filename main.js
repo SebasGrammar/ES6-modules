@@ -37,3 +37,19 @@ console.log(one)
 addOne()
 // one += 5 won't work!
 console.log(one)
+
+const {destructuring: iWasDestructured} = everySingleExport; // Since, as mentioned above, this is an object,
+// you can use good ol' destructuring to pull out variables.
+
+iWasDestructured()
+
+let a = 2
+
+let test = {
+    b: 4,
+}; // This semicolon here is mandatory; not including it would yield an error
+// caused by this chunk of code being interpreted as a function (?)
+
+({b: a} = test) // This is how you reassign a value to a previously defined variable
+// by using destructuring.
+

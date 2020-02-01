@@ -39,3 +39,7 @@ function addOne() {
 
 export {logOne, logTwo, addOne} // It is also possible to export multiple exports by separating them
 // with commas (after you have defined them)
+
+export function destructuring() {
+    console.log("I was destructured.")
+}
